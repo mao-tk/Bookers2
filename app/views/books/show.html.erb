@@ -1,7 +1,7 @@
 <h1>Books#show</h1>
 <!--user info/form-->
 <div>
-  <%= render 'user', user: @user, book: @book %>
+  <%= render 'user', user: @book_show.user, book: @book %>
 </div>
 
 <!--book詳細-->
@@ -18,7 +18,7 @@
       <td>
         <%= @book_show.body %>
       </td>
-      <% if @user == current_user %>
+      <% if @book_show.user == current_user %>
         <td>
           <%= link_to "Edit", edit_book_path(@book_show.id) %>
         </td>
