@@ -58,7 +58,13 @@
         </ul>
       </div>
     </header>
-    <%= yield %>
+    <main>
+      <% flash.each do |message_type, message| %>
+        <%= content_tag :div, message, class: message_type %>
+      <% end %>
+      <% flash[:notice] %>
+      <%= yield %>
+    </main>
     <footer>
       <div>
         <p>CopyRight Infratop.inc</p>

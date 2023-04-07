@@ -28,20 +28,3 @@
     <% end %>
   </table>
 </div>
-
-<!--確認用-->
-<table border="1" >
-  <tr>
-    <th>user_id</th>
-    <th>user_name</th>
-    <th>title</th>
-    <th>body</th>
-  </tr>
-  <% @books.each do |book| %>
-  <tr>
-    <td><%= book.user_id %></td>
-    <td><%= book.user.name %></td>
-    <td><%= book.title %></td>
-    <td><%= book.body %></td>
-  <% end %>
-  </tr>

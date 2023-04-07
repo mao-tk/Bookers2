@@ -24,3 +24,18 @@
     </tr>
     <% end %>
   </table>
+
+  <!--確認用-->
+<table border="1" >
+  <tr>
+    <th>user_id</th>
+    <th>user_name</th>
+    <th>title</th>
+    <th>body</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+  <% end %>
+  </tr>
