@@ -14,7 +14,7 @@
 <div>
   <h2>User info</h2>
   <%= image_tag user.get_profile_image(100,100) %>
-  <table>
+  <table class="table">
     <tr>
       <td>name</td>
       <td><%= user.name %></td>
@@ -27,8 +27,8 @@
 </div>
 
 <!--user setting-->
-<div>
-  <%= link_to edit_user_path(user.id) do %>
+<div class="mt-5 mb-3">
+  <%= link_to edit_user_path(user.id), class: "py-2 px-5 border border-secondary rounded text-secondary " do %>
     <i class="fas fa-user-cog"></i>
   <% end %>
 </div>
