@@ -1,20 +1,8 @@
-<!--error文-->
-<div>
-  <% if @book.errors.any? %>
-    <%= @book.errors.count %>errors prohibited this obj from being saved:
-    <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  <% end %>
-</div>
-
 <!--user info-->
 <div>
   <h2>User info</h2>
   <%= image_tag user.get_profile_image(100,100) %>
-  <table class="table">
+  <table class="table font-weight-bold ">
     <tr>
       <td>name</td>
       <td><%= user.name %></td>
@@ -28,7 +16,7 @@
 
 <!--user setting-->
 <div class="mt-5 mb-3">
-  <%= link_to edit_user_path(user.id), class: "py-2 px-5 border border-secondary rounded text-secondary " do %>
+  <%= link_to edit_user_path(user.id), class: "btn btn-block border border-secondary rounded text-secondary" do %>
     <i class="fas fa-user-cog"></i>
   <% end %>
 </div>
@@ -36,10 +24,14 @@
 <div>
   <h2>New book</h2>
   <%= form_with model: book do |f| %>
-    <%= f.label :Title %><br>
-    <%= f.text_field :title %><br>
-    <%= f.label :Opinion %><br>
-    <%= f.text_area :body %><br>
-    <%= f.submit "Create Book" %>
+    <div class="form-group">
+      <%= f.label :Title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Opinion %>
+      <%= f.text_area :body, class: "form-control"%>
+    </div>
+    <%= f.submit "Create Book", class: "btn bg-success text-light" %>
   <% end %>
 </div>
