@@ -14,46 +14,46 @@
     <header class="bg-dark">
       <nav class="navbar navbar-light">
         <div class="container">
-          <h1 class="text-light">Bookers</h1>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" date-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" area-expanded="false" area-label="Toggle navigation">
+          <h5 class="text-light">Bookers</h1>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" area-expanded="false" area-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <%= link_to root_path do %>
+              <%= link_to root_path, class: 'text-light ' do %>
                 <i class="fas fa-home"></i> Home
               <% end %>
             </li>
             <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to users_path do %>
+              <%= link_to users_path, class: 'text-light' do %>
                 <i class="fas fa-users"></i> User
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to books_path do %>
+              <%= link_to books_path, class: 'text-light' do %>
                 <i class="fas fa-book-open"></i> Book
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to destroy_user_session_path, method: :delete do %>
+              <%= link_to destroy_user_session_path, class: 'text-light', method: :delete do %>
                 <i class="fas fa-sign-out-alt"></i> Log out
               <% end %>
             </li>
             <% else %>
             <li class="nav-item">
-              <%= link_to about_path do %>
+              <%= link_to about_path, class: 'text-light' do %>
                 <i class="fas fa-link"></i> About
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to new_user_registration_path do %>
+              <%= link_to new_user_registration_path, class: 'text-light' do %>
                 <i class="fas fa-user-plus"></i> Sign up
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to user_session_path, method: :post do %>
+              <%= link_to user_session_path, class: 'text-light', method: :post do %>
                 <i class="fas fa-sign-in-alt"></i> Log in
               <% end %>
             </li>
