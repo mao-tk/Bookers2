@@ -1,16 +1,18 @@
 <!--user info-->
 <div>
   <h2>User info</h2>
-  <%= image_tag user.get_profile_image(100,100) %>
+  <%= image_tag user.get_profile_image(90,90) %>
   <table class="table font-weight-bold ">
-    <tr>
-      <td>name</td>
-      <td><%= user.name %></td>
-    </tr>
-    <tr>
-      <td>introduction</td>
-      <td><%= user.introduction %></td>
-    </tr>
+    <tbody>
+      <tr class="col-1">
+        <td>name</td>
+        <td><%= user.name %></td>
+      </tr>
+      <tr class="col-2">
+        <td>introduction</td>
+        <td><%= user.introduction %></td>
+      </tr>
+    </tbody>
   </table>
 </div>
 
