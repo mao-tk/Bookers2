@@ -11,16 +11,16 @@
         <h3>Book detail</h3>
         <table class="table">
           <tr>
-            <td class="col-1">
+            <td>
               <%= link_to user_path(@book_show.user_id) do %>
                 <%= image_tag @book_show.user.get_profile_image(100,100) %><br>
                 <%= @book_show.user.name %>
               <% end %>
             </td>
-            <td class="col-3">
+            <td>
               <%= link_to @book_show.title, book_path(@book_show.id) %>
             </td>
-            <td class="col-4">
+            <td>
               <%= @book_show.body %>
             </td>
             <% if @book_show.user == current_user %>
