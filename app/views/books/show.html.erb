@@ -17,6 +17,7 @@
                 <%= @book_show.user.name %>
               <% end %>
             </td>
+            <td><%= image_tag @book_show.get_book_image(80,80) %></td>
             <td>
               <%= link_to @book_show.title, book_path(@book_show.id) %>
             </td>
